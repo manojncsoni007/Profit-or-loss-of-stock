@@ -6,18 +6,18 @@ const outputBox = document.querySelector('.output-container');
 
 
 function displayMessage(msg) {
-    outputBox.innerHTML = msg
+    outputBox.innerHTML = msg;
 }
 
 function calculateProfitLoss(iP, cP, q) {
     if (cP > iP) {
         let profit = (cP - iP) * q;
         let profitPercentage = (profit * 100) / (iP * q)
-        displayMessage(`Your profit is ${profit} and the percentage is ${profitPercentage}%`);
+        displayMessage(`Your profit is <span>${profit}</span> rupees and the percentage is <span>${profitPercentage.toFixed(2)}%</span>`);
     } else if (iP > cP) {
         let loss = (iP - cP) * q;
         let lossPercentage = (loss * 100) / (iP * q);
-        displayMessage(`Your loss is ${loss} and the percentage is ${lossPercentage}%`);
+        displayMessage(`Your loss is ${loss} and the percentage is ${lossPercentage.toFixed(2)}%`);
     }
 }
 calculateBtn.addEventListener('click', () => {
