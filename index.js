@@ -17,7 +17,7 @@ function calculateProfitLoss(iP, cP, q) {
     } else if (iP > cP) {
         let loss = (iP - cP) * q;
         let lossPercentage = (loss * 100) / (iP * q);
-        displayMessage(`Your loss is ${loss} and the percentage is ${lossPercentage.toFixed(2)}%`);
+        displayMessage(`Your loss is ${loss.toFixed(2)} and the percentage is ${lossPercentage.toFixed(2)}%`);
     }
 }
 calculateBtn.addEventListener('click', () => {
